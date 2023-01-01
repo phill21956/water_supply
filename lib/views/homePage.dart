@@ -1,12 +1,27 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
+  const Home({required this.userType, Key? key}) : super(key: key);
+  final int userType;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(userType == 1
+            ? 'Consumer'
+            : userType == 2
+                ? 'supplier'
+                : 'Unresolved'),
+      ),
+      body: Container(
+        child: Center(
+          child: Text(userType == 1
+              ? 'Consumer'
+              : userType == 2
+                  ? 'supplier'
+                  : 'Unresolved'),
+        ),
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_supply/views/onboarding_screens/onbording_pg2.dart';
 
 import '../../Models/onboarding_model.dart';
 import '../homePage.dart';
@@ -88,7 +89,7 @@ class _OnbordingState extends State<Onbording> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => const Home(),
+                      builder: (_) => OnboardingPage2(),
                     ),
                   );
                 }
